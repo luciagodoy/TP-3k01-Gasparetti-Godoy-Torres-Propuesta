@@ -59,12 +59,19 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 | CRUD | 
 |:-|
 | CRUD Categoría Habitación | 
-| CRUD Adicional Servicio | 
+| CRUD Servicio | 
+| CRUD Reserva (dependiente de Habitación y Huésped) | 
+| CRUD Capacidad | 
+| CRUD Precio Habitación (dependiente de Capacidad y Categoría Habitación) | 
 | CRUD Ciudad | 
 | CRUD Provincia |
 | CRUD Habitación (dependiente de Categoría) |
 | CRUD Huésped (dependiente de Ciudad) |
-| CRUD Personal Hotelero | 
+| CRUD Empleado | 
+| CRUD Pago (dependiente de Reserva) |
+| CRUD Cupo (dependiente de Servicio) |
+| CRUD Precio Servicio (dependiente de Servicio) |
+| CRUD Reserva Servicio (dependiente de Reserva y Cupo) |
 
 **Casos de Uso/Epic:**
 
@@ -72,14 +79,14 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 |:-|:-|
 | Realizar Reserva de Habitación | Crear nueva reserva seleccionando huésped, habitación y fechas |
 | Procesar Check-in de Reserva | Registrar entrada del huésped usando datos de la reserva |
-| Procesar Check-out y Facturación | Registrar salida, calcular montos, incluir servicios consumidos y generar factura |
+| Procesar Check-out y Pago | Registrar salida, calcular montos, incluir servicios consumidos y generar comprobante de pago |
 
 ### Alcance Adicional Voluntario
 
 | Tipo | Detalle |
 |:-|:-|
 | Listados Complejos | 1. Habitaciones ocupadas hoy <br>2. Historial de reservas por huésped |
-| Casos de Uso Adicionales | 1. Modificar reserva (cambio de fechas o habitación)<br>2. Consumir servicios adicionales durante la estadía<br>3. Cancelar reserva |
+| Casos de Uso Adicionales | 1. Modificar reserva (cambio de fechas o habitación)<br>2. Consumir servicios adicionales durante la estadía<br>3. Cancelar reserva<br>4. Registrar Empleado |
 | Notificaciones | 1. Email de confirmación de reserva<br>2. Recordatorio de check-out 24 horas antes|
 | Reportes | 1. Reporte de ocupación por período<br>2. Reporte de servicios más consumidos |
 | Otros | 1. Validación automática de disponibilidad en tiempo real |
