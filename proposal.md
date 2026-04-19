@@ -4,7 +4,7 @@
 ### Integrantes
 * 54049 - Gasparetti, María Victoria
 * 54095 - Godoy, Lucía María
-* Legajo - Torres, Matías
+* 54351 - Torres, Matías
 
 ### Repositorios
 * [frontend app](https://github.com/luciagodoy/TP-3k01-Gasparetti-Godoy-Torres-Frontend.git)
