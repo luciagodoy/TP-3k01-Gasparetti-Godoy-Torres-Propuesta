@@ -2,7 +2,7 @@
 
 ## Grupo
 ### Integrantes
-* Legajo - Gasparetti, María Victoria
+* 54049 - Gasparetti, María Victoria
 * 54095 - Godoy, Lucía María
 * Legajo - Torres, Matías
 
