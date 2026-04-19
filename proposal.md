@@ -18,7 +18,7 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 <img width="1771" height="841" alt="MD-Desarrollo drawio (1)" src="https://github.com/user-attachments/assets/ddd5da8a-29e9-4d6b-be96-46bf7d7c20da" />
 
 
-### Alcance Funcional
+#### Alcance Funcional
 
 ### Alcance Mínimo
 
