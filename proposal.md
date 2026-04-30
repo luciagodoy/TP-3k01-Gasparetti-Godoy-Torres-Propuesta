@@ -16,7 +16,7 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 
 ### Modelo
 
-<img width="1771" height="841" alt="MD-Desarrollo drawio (2)" src="https://github.com/user-attachments/assets/6c4b0443-1e98-4185-a207-8a1ebb139eb5" />
+<img width="1771" height="701" alt="MD-Desarrollo drawio" src="https://github.com/user-attachments/assets/fd5a606f-f2e4-461a-880c-55d9017b6a0f" />
 
 
 ## Alcance Funcional
@@ -42,7 +42,7 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 
 | Listado | Filtro |
 |:-|:-|
-| Listado de Habitaciones | Filtrado por categoría de habitación |
+| Listado de Habitaciones | Filtrado por categoría, disponibilidad entre fechas y cantidad de personas |
 | Listado de Reservas | Filtrado por rango de fechas |
 
 **Casos de Uso/Epic:**
@@ -61,14 +61,11 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 | CRUD Categoría Habitación | 
 | CRUD Servicio | 
 | CRUD Reserva (dependiente de Habitación y Huésped) | 
-| CRUD Capacidad | 
-| CRUD Precio Habitación (dependiente de Capacidad y Categoría Habitación) | 
 | CRUD Ciudad | 
 | CRUD Provincia |
 | CRUD Habitación (dependiente de Categoría) |
 | CRUD Huésped (dependiente de Ciudad) |
 | CRUD Empleado | 
-| CRUD Pago (dependiente de Reserva) |
 | CRUD Cupo (dependiente de Servicio) |
 | CRUD Precio Servicio (dependiente de Servicio) |
 | CRUD Reserva Servicio (dependiente de Reserva y Cupo) |
