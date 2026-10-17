@@ -12,78 +12,36 @@
 
 ## Tema
 ### Descripción
-Sistema de gestión para hoteles que permite administrar reservas, check-in/check-out, facturación de estadías y servicios adicionales. Optimiza la operación hotelera automatizando procesos clave y mejorando la experiencia del cliente.
+Sistema de gestión para hoteles que permite administrar reservas, check-in/check-out, facturación de estadías y servicios adicionales. Los huéspedes pueden buscar habitaciones disponibles, reservar y contratar servicios; el personal del hotel opera las reservas y el administrador gestiona empleados y usuarios. Optimiza la operación hotelera automatizando procesos clave y mejorando la experiencia del cliente.
 
 ### Modelo
 
-<img width="1771" height="701" alt="MD-Desarrollo drawio" src="https://github.com/user-attachments/assets/fd5a606f-f2e4-461a-880c-55d9017b6a0f" />
+<img width="3700" height="1560" alt="modelo-de-dominio" src="https://github.com/user-attachments/assets/7180081b-28bf-4343-ba19-97e482aaf690" />
 
 
 ## Alcance Funcional
 
 ### Alcance Mínimo
 
-**CRUD Simples:**
-
-| CRUD |
-|:-|
-| CRUD Categoría Habitación |
-| CRUD Adicional Servicio |
-| CRUD Ciudad |
-
-**CRUD Dependientes:**
-
-| CRUD | Dependencia |
+Regularidad:
+|Req|Detalle|
 |:-|:-|
-| CRUD Habitación | {depende de} CRUD Categoría Habitación |
-| CRUD Huésped | {depende de} CRUD Ciudad |
+|CRUD simple|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Ciudad|
+|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Categoría Habitación<br>2. CRUD Huésped {depende de} CRUD Ciudad|
+|Listado<br>+<br>detalle|1. Listado de habitaciones filtrado por categoría, disponibilidad entre fechas y cantidad de personas, muestra nro, categoría y precio por noche => detalle CRUD Habitación<br>2. Listado de reservas filtrado por rango de fechas, muestra nro de habitación, fecha inicio y fin de estadía, estado y nombre del huésped => detalle muestra datos completos de la reserva y del huésped|
+|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
 
-**Listados con Filtro + Detalle:**
-
-| Listado | Filtro |
+Adicionales para Aprobación
+|Req|Detalle|
 |:-|:-|
-| Listado de Habitaciones | Filtrado por categoría, disponibilidad entre fechas y cantidad de personas |
-| Listado de Reservas | Filtrado por rango de fechas |
-
-**Casos de Uso/Epic:**
-
-| Caso de Uso | Descripción |
-|:-|:-|
-| Realizar Reserva de Habitación | Crear nueva reserva para un huésped en una habitación específica |
-| Procesar Check-in de Reserva | Registrar la entrada del huésped y cambiar estado de habitación |
-
-### Adicionales para Aprobación
-
-**CRUDs de todas las clases de negocio:**
-
-| CRUD | 
-|:-|
-| CRUD Categoría Habitación | 
-| CRUD Servicio | 
-| CRUD Reserva (dependiente de Habitación y Huésped) | 
-| CRUD Ciudad | 
-| CRUD Provincia |
-| CRUD Habitación (dependiente de Categoría) |
-| CRUD Huésped (dependiente de Ciudad) |
-| CRUD Empleado | 
-| CRUD Cupo (dependiente de Servicio) |
-| CRUD Precio Servicio (dependiente de Servicio) |
-| CRUD Reserva Servicio (dependiente de Reserva y Cupo) |
-
-**Casos de Uso/Epic:**
-
-| Caso de Uso | Descripción |
-|:-|:-|
-| Realizar Reserva de Habitación | Crear nueva reserva seleccionando huésped, habitación y fechas |
-| Procesar Check-in de Reserva | Registrar entrada del huésped usando datos de la reserva |
-| Procesar Check-out y Pago | Registrar salida, calcular montos, incluir servicios consumidos y generar comprobante de pago |
+|CRUD|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Ciudad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Huésped<br>7. CRUD Empleado<br>8. CRUD Cupo<br>9. CRUD Precio Servicio<br>10. CRUD Reserva<br>11. CRUD Reserva Servicio<br>12. CRUD Usuario|
+|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y generar el comprobante de pago de la estadía y los servicios consumidos|
 
 ### Alcance Adicional Voluntario
 
-| Tipo | Detalle |
+|Req|Detalle|
 |:-|:-|
-| Listados Complejos | 1. Habitaciones ocupadas hoy <br>2. Historial de reservas por huésped |
-| Casos de Uso Adicionales | 1. Modificar reserva (cambio de fechas o habitación)<br>2. Consumir servicios adicionales durante la estadía<br>3. Cancelar reserva<br>4. Registrar Empleado |
-| Notificaciones | 1. Email de confirmación de reserva<br>2. Recordatorio de check-out 24 horas antes|
-| Reportes | 1. Reporte de ocupación por período<br>2. Reporte de servicios más consumidos |
-| Otros | 1. Validación automática de disponibilidad en tiempo real |
+|Listados|1. Habitaciones ocupadas hoy, muestra nro, piso y categoría<br>2. Historial de reservas por huésped, muestra fechas, estado y habitación de cada reserva|
+|CUU/Epic|1. Consumir servicios adicionales durante la estadía<br>2. Cancelación de reserva<br>3. Modificar reserva (cambio de fechas o habitación)<br>4. Registro de huéspedes y gestión de usuarios por rol|
+|Otros|1. Validación automática de disponibilidad de la habitación al reservar|<img width="3700" height="1560" alt="modelo-de-dominio" src="https://github.com/user-attachments/assets/c7273154-fc77-4cde-8ca4-9f65b166461e" />
+
