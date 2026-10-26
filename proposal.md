@@ -26,7 +26,7 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Ciudad|
+|CRUD simple|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Provincia|
 |CRUD dependiente|1. CRUD Habitación {depende de} CRUD Categoría Habitación<br>2. CRUD Huésped {depende de} CRUD Ciudad|
 |Listado<br>+<br>detalle|1. Listado de habitaciones filtrado por categoría, disponibilidad entre fechas y cantidad de personas, muestra nro, categoría y precio por noche => detalle CRUD Habitación<br>2. Listado de reservas filtrado por rango de fechas, muestra nro de habitación, fecha inicio y fin de estadía, estado y nombre del huésped => detalle muestra datos completos de la reserva y del huésped|
 |CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
@@ -34,7 +34,7 @@ Regularidad:
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Ciudad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Huésped<br>7. CRUD Empleado<br>8. CRUD Cupo<br>9. CRUD Precio Servicio<br>10. CRUD Reserva<br>11. CRUD Reserva Servicio<br>12. CRUD Usuario|
+|CRUD|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Provincia<br>4. CRUD Ciudad<br>5. CRUD Habitación<br>6. CRUD Huésped<br>7. CRUD Empleado<br>8. CRUD Cupo<br>9. CRUD Precio Servicio<br>10. CRUD Reserva<br>11. CRUD Reserva Servicio<br>12. CRUD Usuario|
 |CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y generar el comprobante de pago de la estadía y los servicios consumidos|
 
 ### Alcance Adicional Voluntario
