@@ -19,7 +19,6 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 <img width="3709" height="1564" alt="image" src="https://github.com/user-attachments/assets/38b2f2c6-8ec8-4c06-8d12-2059fc82df99" />
 
 
-
 ## Alcance Funcional
 
 ### Alcance Mínimo
@@ -27,23 +26,22 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Provincia|
-|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Categoría Habitación<br>2. CRUD Huésped {depende de} CRUD Ciudad|
-|Listado<br>+<br>detalle|1. Listado de habitaciones filtrado por categoría, disponibilidad entre fechas y cantidad de personas, muestra nro, categoría y precio por noche => detalle CRUD Habitación<br>2. Listado de reservas filtrado por rango de fechas, muestra nro de habitación, fecha inicio y fin de estadía, estado y nombre del huésped => detalle muestra datos completos de la reserva y del huésped|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
+|CRUD simple|1. CRUD Room Category<br>2. CRUD Amenity<br>3. CRUD Province|
+|CRUD dependiente|1. CRUD Room {depende de} CRUD Room Category<br>2. CRUD Guest {depende de} CRUD City|
+|Listado<br>+<br>detalle|1. Listado de Rooms filtrado por Room Category, disponibilidad entre fechas y cantidad de personas, muestra number, Room Category y pricePerNight => detalle CRUD Room<br>2. Listado de Reservations filtrado por rango de fechas, muestra number de Room, startDate y endDate de la estadía, status y nombre del Guest => detalle muestra datos completos de la Reservation y del Guest|
+|CUU/Epic|1. Reservar una Room para la estadía<br>2. Realizar el check-in de una Reservation|
 
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD|1. CRUD Categoría Habitación<br>2. CRUD Servicio<br>3. CRUD Provincia<br>4. CRUD Ciudad<br>5. CRUD Habitación<br>6. CRUD Huésped<br>7. CRUD Empleado<br>8. CRUD Cupo<br>9. CRUD Precio Servicio<br>10. CRUD Reserva<br>11. CRUD Reserva Servicio<br>12. CRUD Usuario|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y generar el comprobante de pago de la estadía y los servicios consumidos|
+|CRUD|1. CRUD Room Category<br>2. CRUD Amenity<br>3. CRUD Province<br>4. CRUD City<br>5. CRUD Room<br>6. CRUD Guest<br>7. CRUD Employee<br>8. CRUD Amenity Quota<br>9. CRUD Amenity Price<br>10. CRUD Reservation<br>11. CRUD Reservation Amenity<br>12. CRUD User<br>13. CRUD Pricing Rule|
+|CUU/Epic|1. Reservar una Room para la estadía<br>2. Realizar el check-in de una Reservation<br>3. Realizar el check-out y generar el comprobante de pago de la estadía y los Amenities consumidos|
 
 ### Alcance Adicional Voluntario
 
 |Req|Detalle|
 |:-|:-|
-|Listados|1. Habitaciones ocupadas hoy, muestra nro, piso y categoría, y si el huésped ya hizo el check-in o está esperando hacerlo<br>2. Historial de reservas por huésped, muestra fechas, estado y habitación de cada reserva|
-|CUU/Epic|1. Consumir servicios adicionales durante la estadía<br>2. Cancelación de reserva<br>3. Modificar reserva (cambio de fechas o habitación)<br>4. Registro de huéspedes y gestión de usuarios por rol<br>5. Reserva en autoservicio: el huésped reserva, modifica las fechas y cancela sus propias reservas|
-|Otros|1. Validación automática de disponibilidad de la habitación al reservar<br>2. Tarifa dinámica: el precio por noche se ajusta según la ocupación de la categoría y la antelación de la reserva, con reglas configurables<br>3. Baja automática de las reservas pendientes que llegan a su fecha de salida sin check-in, liberando sus servicios<br>4. Restricciones de borrado: no se puede eliminar una reserva en curso, un huésped con reservas activas ni una habitación ocupada o con reservas pendientes|
-
+|Listados|1. Rooms ocupadas hoy, muestra number, floor y Room Category, y si el Guest ya hizo el check-in o está esperando hacerlo<br>2. Historial de Reservations por Guest, muestra startDate, endDate, status y Room de cada Reservation|
+|CUU/Epic|1. Consumir Amenities adicionales durante la estadía<br>2. Cancelación de Reservation<br>3. Modificar Reservation (cambio de fechas o Room)<br>4. Registro de Guests y gestión de Users por role<br>5. Reservation en autoservicio: el Guest reserva, modifica las fechas y cancela sus propias Reservations|
+|Otros|1. Validación automática de disponibilidad de la Room al reservar<br>2. Tarifa dinámica: el precio por noche se ajusta según la ocupación de la Room Category y la antelación de la Reservation, con Pricing Rules configurables<br>3. Baja automática de las Reservations pendientes que llegan a su endDate sin check-in, liberando sus Amenities<br>4. Restricciones de borrado: no se puede eliminar una Reservation en curso, un Guest con Reservations activas ni una Room ocupada o con Reservations pendientes|
 
