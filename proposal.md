@@ -16,7 +16,8 @@ Sistema de gestión para hoteles que permite administrar reservas, check-in/chec
 
 ### Modelo
 
-<img width="3700" height="1560" alt="modelo-de-dominio" src="https://github.com/user-attachments/assets/7180081b-28bf-4343-ba19-97e482aaf690" />
+<img width="3709" height="1564" alt="image" src="https://github.com/user-attachments/assets/38b2f2c6-8ec8-4c06-8d12-2059fc82df99" />
+
 
 
 ## Alcance Funcional
@@ -41,7 +42,8 @@ Adicionales para Aprobación
 
 |Req|Detalle|
 |:-|:-|
-|Listados|1. Habitaciones ocupadas hoy, muestra nro, piso y categoría<br>2. Historial de reservas por huésped, muestra fechas, estado y habitación de cada reserva|
-|CUU/Epic|1. Consumir servicios adicionales durante la estadía<br>2. Cancelación de reserva<br>3. Modificar reserva (cambio de fechas o habitación)<br>4. Registro de huéspedes y gestión de usuarios por rol|
-|Otros|1. Validación automática de disponibilidad de la habitación al reservar|<img width="3700" height="1560" alt="modelo-de-dominio" src="https://github.com/user-attachments/assets/c7273154-fc77-4cde-8ca4-9f65b166461e" />
+|Listados|1. Habitaciones ocupadas hoy, muestra nro, piso y categoría, y si el huésped ya hizo el check-in o está esperando hacerlo<br>2. Historial de reservas por huésped, muestra fechas, estado y habitación de cada reserva|
+|CUU/Epic|1. Consumir servicios adicionales durante la estadía<br>2. Cancelación de reserva<br>3. Modificar reserva (cambio de fechas o habitación)<br>4. Registro de huéspedes y gestión de usuarios por rol<br>5. Reserva en autoservicio: el huésped reserva, modifica las fechas y cancela sus propias reservas|
+|Otros|1. Validación automática de disponibilidad de la habitación al reservar<br>2. Tarifa dinámica: el precio por noche se ajusta según la ocupación de la categoría y la antelación de la reserva, con reglas configurables<br>3. Baja automática de las reservas pendientes que llegan a su fecha de salida sin check-in, liberando sus servicios<br>4. Restricciones de borrado: no se puede eliminar una reserva en curso, un huésped con reservas activas ni una habitación ocupada o con reservas pendientes|
+
 
